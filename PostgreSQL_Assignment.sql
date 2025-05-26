@@ -95,9 +95,10 @@ SELECT sighting_id, sighting_time,
        END AS time_of_day
 FROM sightings;
 
-
+-- DROP TABLE rangers;
 DELETE FROM rangers
 WHERE ranger_id NOT IN (SELECT DISTINCT ranger_id FROM sightings);
+
 
 
 
